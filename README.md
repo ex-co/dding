@@ -1,4 +1,5 @@
 D-Ding
-: Deligent Day-ing
+======
+Deligent Day-ing
 
 JAEWON & YEAJI
