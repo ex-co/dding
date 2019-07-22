@@ -1,13 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+import {withStyles} from '@material-ui/core/styles'
+import Typography from '@material-ui/core/Typography';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      DDing ~~
-      Hello Yezi & Jaewon
-    </div>
+          <Grid container direction="row" spacing={16}>
+            <Grid item xs={3} sm={6} md={8}>
+              <Paper>
+                <Typography>Main Section</Typography>
+              </Paper>
+            </Grid>
+            <Grid item xs={3} sm={6} md={4}>
+              <Paper>
+                <Typography>Calendar Section</Typography>
+              </Paper>
+            </Grid>
+          </Grid>
+      </div>
   );
 }
 
