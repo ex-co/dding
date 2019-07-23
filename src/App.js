@@ -9,12 +9,12 @@ function App() {
   return (
     <div className="App">
           <Grid container direction="row" spacing={16}>
-            <Grid item xs={3} sm={6} md={9}>
+            <Grid item xs={3} sm={6} md={8}>
               <Paper>
                 <Typography>Main Section</Typography>
               </Paper>
             </Grid>
-            <Grid item xs={3} sm={6} md={3}>
+            <Grid item xs={3} sm={6} md={4}>
               <Paper>
                 <Typography>Calendar</Typography>
                 <div style={{justifyContent:'center'}}>
