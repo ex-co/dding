@@ -9,9 +9,14 @@ import TempDrawer from './sidebar';
 function App() {
   return (
     <div className="App">
-          <TempDrawer />
-          <Grid container direction="row" spacing={16}>
-            <Grid item xs={3} sm={6} md={8}>
+    <Grid container direction="row" justify="flex-start" >
+    <Grid item>
+    <TempDrawer />
+    </Grid>
+    
+    <Grid item >
+    <Grid container direction="row">
+    <Grid item xs={3} sm={6} md={8}>
               <Paper>
                 <Typography>Main Section</Typography>
               </Paper>
@@ -28,7 +33,9 @@ function App() {
               </Paper>
             </Grid>
           </Grid>
-      </div>
+          </Grid>
+    </Grid>
+    </div>
   );
 }
 
