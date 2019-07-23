@@ -9,6 +9,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
+import MenuIcon from '@material-ui/icons/Menu';
 
 const useStyles = makeStyles({
     list: {
@@ -51,7 +52,7 @@ export default function TempDrawer() {
 
   return (
     <div>
-        <Button onClick={() => toggleSidebar(true)}><MailIcon /></Button>
+        <Button onClick={() => toggleSidebar(true)}><MenuIcon /></Button>
         <Drawer open={state} onClose={() => toggleSidebar(false)}>
             {sideList('left')}
         </Drawer>
