@@ -1,7 +1,7 @@
 import React from 'react';
 import Calendar from 'react-calendar'
 
-class CalendarBoard{
+class CalendarBoard extends React.Component{
     render(){
         return (
             <Calendar className="Calendar">
