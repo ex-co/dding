@@ -2,7 +2,7 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 
 import CalendarSection from '../CalenderSection/Calendar';
-import DataManager from '../Manager/DataManager';
+import * as dm from '../Manager/DataManager';
 import TempDrawer from '../sidebar';
 import './App.css'
 
@@ -16,10 +16,16 @@ theme = responsiveFontSizes(theme);
 class App extends React.Component {
 
     state = {
-
+        user: "yegeeee"
     }
     _getContent = () => {
-        const tasks = DataManager();
+
+        const tasks = dm.default.getUserTask(this.state.user);
+        const teams = dm.default.getUserTeam(this.state.user);
+
+        console.log(tasks[0]);
+        console.log(tasks[1]);
+
         return (
             <Grid container className="gridContainer">
                 <Grid item className="dock">
@@ -29,11 +35,8 @@ class App extends React.Component {
                     <ThemeProvider theme={theme}>
                         <Typography variant="h4">Main Section</Typography>
                     </ThemeProvider>
-                    {tasks[0].User} 
-                    {tasks[0].Team} 
-                    {tasks[0].Board} 
-                    {tasks[0].Task} 
-                    {tasks[0].Due} 
+                    {JSON.stringify(tasks)}
+                    {teams}
                 </Grid>
                 <Grid item className="calendarSection">
                     <ThemeProvider theme={theme}>
