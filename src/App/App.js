@@ -11,7 +11,7 @@ import './App.css'
 
 class App extends React.Component {
 
-    render() {g
+    render() {
         return (
             <div className="mainContainer">
                 <Grid container className="gridContainer">
