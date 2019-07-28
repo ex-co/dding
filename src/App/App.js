@@ -9,6 +9,7 @@ import './App.css'
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import { Typography } from '@material-ui/core';
+import Agenda from '../Agenda/Agenda';
 
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
@@ -35,6 +36,18 @@ class App extends React.Component {
                     <ThemeProvider theme={theme}>
                         <Typography variant="h4">Main Section</Typography>
                     </ThemeProvider>
+                    <Grid container>
+                        <Grid item xs={4}>
+                            <Agenda title={"TODO"} number={2}></Agenda>
+                        </Grid>
+                        <Grid item xs={4}>
+                            <Agenda title={"DOING"} number={3}></Agenda>
+                        </Grid>
+                        <Grid item xs={4}>
+                            <Agenda title={"DONE"} number={3}></Agenda>
+                        </Grid>
+                    </Grid>
+                    
                     {JSON.stringify(tasks)}
                     {teams}
                 </Grid>
@@ -42,7 +55,7 @@ class App extends React.Component {
                     <ThemeProvider theme={theme}>
                         <Typography variant="h4">
                             Calendar
-                </Typography>
+                        </Typography>
                     </ThemeProvider>
                     <CalendarSection>
                     </CalendarSection>

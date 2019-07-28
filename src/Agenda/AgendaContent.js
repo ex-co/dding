@@ -2,7 +2,7 @@ import React from 'react';
 import './Agenda.css';
 import { ExpansionPanelDetails } from '@material-ui/core';
 
-const Agenda = ({title, number}) => {
+const AgendaContent = ({title, number}) => {
     return (
         <ExpansionPanelDetails>
             <ul>
@@ -13,4 +13,4 @@ const Agenda = ({title, number}) => {
         </ExpansionPanelDetails>
     );
 };
-export default Agenda;
+export default AgendaContent;
