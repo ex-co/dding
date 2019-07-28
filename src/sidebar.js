@@ -9,6 +9,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import MenuIcon from '@material-ui/icons/Menu';
+import { Avatar } from '@material-ui/core';
 
 const useStyles = makeStyles({
     list: {
@@ -27,9 +28,9 @@ export default function TempDrawer() {
     const sideList = side => (
         <div className={classes.list}>
         <List>
-            {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+            {['Jaewon', 'Yeji'].map((text, index) => (
                 <ListItem button key={text}>
-                    <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+                    <ListItemIcon><Avatar>{text[0]}</Avatar></ListItemIcon>
                     <ListItemText primary={text} />
                 </ListItem>
             ))}
