@@ -30,29 +30,36 @@ class App extends React.Component {
 
         return (
             <Grid container className="gridContainer">
-            <Grid item className="dock">
-                <TempDrawer />
-            </Grid>
-            <Grid item className="mainSection">
-                <Typography>Main Section</Typography>
-                <Grid container>
-                    <Grid item>
-                        <Agenda title={"TODO"} number={53}></Agenda>
-                    </Grid>
-                    <Grid item>
-                        <Agenda title={"DOING"} number={13}></Agenda>
-                    </Grid>
-                    <Grid item>
-                        <Agenda title={"DONE"} number={99}></Agenda>
-                    </Grid>
+                <Grid item className="dock">
+                    <TempDrawer />
                 </Grid>
+                <Grid item className="mainSection">
+                    <ThemeProvider theme={theme}>
+                        <Typography variant="h4">Main Section</Typography>
+                    </ThemeProvider>
+                    <Grid container>
+                        <Grid item xs={4}>
+                            <Agenda title={"TODO"} number={53}></Agenda>
+                        </Grid>
+                        <Grid item xs={4}>
+                            <Agenda title={"DOING"} number={13}></Agenda>
+                        </Grid>
+                        <Grid item xs={4}>
+                            <Agenda title={"DONE"} number={99}></Agenda>
+                        </Grid>
+                    </Grid>
 
-                {JSON.stringify(tasks)}
+                    {JSON.stringify(tasks)}
+                </Grid>
+                <Grid item className="calendarSection">
+                    <ThemeProvider theme={theme}>
+                        <Typography variant="h4">Calendar</Typography>
+                    </ThemeProvider>
+                    <CalendarSection>
+                        
+                    </CalendarSection>
+                </Grid>
             </Grid>
-            <Grid item className="calendarSection">
-                <Typography>Calendar</Typography>
-            </Grid>
-        </Grid>
         )
     }
 
@@ -60,9 +67,9 @@ class App extends React.Component {
         return (
             <div className="mainContainer">
                 {this._getContent()}
-                </div>
+            </div>
         )
     };
-}          
+}
 
 export default App;
