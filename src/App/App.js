@@ -5,7 +5,7 @@ import TempDrawer from '../sidebar';
 import { Grid } from '@material-ui/core';
 
 import './App.css'
-import Agenda from '../Agenda';
+import Agenda from '../Agenda/Agenda.js';
 
 class App extends React.Component {
     render() {
@@ -17,10 +17,16 @@ class App extends React.Component {
                     </Grid>
                     <Grid item className="mainSection">
                         <Typography>Main Section</Typography>
-                        <Grid container style={{display: 'block'}}>
-                            <Agenda title={"TODO"} number={53}></Agenda>
-                            <Agenda title={"DOING"} number={13}></Agenda>
-                            <Agenda title={"DONE"} number={99}></Agenda>
+                        <Grid container>
+                            <Grid item>
+                                <Agenda title={"TODO"} number={53}></Agenda>
+                            </Grid>
+                            <Grid item>
+                                <Agenda title={"DOING"} number={13}></Agenda>
+                            </Grid>
+                            <Grid item>
+                                <Agenda title={"DONE"} number={99}></Agenda>
+                            </Grid>
                         </Grid>
                     </Grid>
                     <Grid item className="calendarSection">

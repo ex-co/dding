@@ -13,5 +13,4 @@ const Agenda = ({title, number}) => {
         </ExpansionPanelDetails>
     );
 };
-
 export default Agenda;
