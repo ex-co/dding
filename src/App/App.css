@@ -27,3 +27,11 @@
 .sectionTitle{
   font-variant: h4;
 }
+
+.panelContainer{
+  flex: 1
+}
+
+.agendaContainer{
+  margin: 10px;
+}
