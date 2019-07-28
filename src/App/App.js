@@ -9,13 +9,9 @@ import { borders } from '@material-ui/system';
 
 import './App.css'
 
-const calendarSize = () => {
-
-}
-
 class App extends React.Component {
 
-    render() {
+    render() {g
         return (
             <div className="mainContainer">
                 <Grid container className="gridContainer">
