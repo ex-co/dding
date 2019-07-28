@@ -1,17 +1,21 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
-import Paper from '@material-ui/core/Paper';
-import CalendarBoard from '../Calendar';
+import Grid from '@material-ui/core/Grid';
+
+import CalendarSection from '../CalenderSection/Calendar';
 import TempDrawer from '../sidebar';
-
-import { Grid, makeStyles, Theme, createStyles } from '@material-ui/core';
-import { borders } from '@material-ui/system';
-
 import './App.css'
+
+import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
+import { Typography } from '@material-ui/core';
+
+let theme = createMuiTheme();
+theme = responsiveFontSizes(theme);
 
 class App extends React.Component {
 
     render() {
+
         return (
             <div className="mainContainer">
                 <Grid container className="gridContainer">
@@ -19,10 +23,18 @@ class App extends React.Component {
                         <TempDrawer />
                     </Grid>
                     <Grid item className="mainSection">
-                        <Typography>Main Section</Typography>
+                        <ThemeProvider theme={theme}>
+                            <Typography variant="h4">Main Section</Typography>
+                        </ThemeProvider>
                     </Grid>
                     <Grid item className="calendarSection">
-                        <Typography>Calendar</Typography>
+                        <ThemeProvider theme={theme}>
+                            <Typography variant="h4">
+                                Calendar
+                            </Typography>
+                        </ThemeProvider>
+                        <CalendarSection>
+                        </CalendarSection>
                     </Grid>
                 </Grid>
             </div>
