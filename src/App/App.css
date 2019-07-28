@@ -24,10 +24,6 @@
   width: calc(30% - 64px);
 }
 
-.panelContainer{
-  flex: 1
-}
-
-.agendaContainer{
-  margin: 10px;
+.sectionTitle{
+  font-variant: h4;
 }
