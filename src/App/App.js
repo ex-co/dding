@@ -1,16 +1,13 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import Paper from '@material-ui/core/Paper';
-import CalendarBoard from '../Calendar';
 import TempDrawer from '../sidebar';
 
-import { Grid, makeStyles, Theme, createStyles } from '@material-ui/core';
-import { borders } from '@material-ui/system';
+import { Grid } from '@material-ui/core';
 
 import './App.css'
+import Agenda from '../Agenda';
 
 class App extends React.Component {
-
     render() {
         return (
             <div className="mainContainer">
@@ -20,6 +17,11 @@ class App extends React.Component {
                     </Grid>
                     <Grid item className="mainSection">
                         <Typography>Main Section</Typography>
+                        <Grid container style={{display: 'block'}}>
+                            <Agenda title={"TODO"} number={53}></Agenda>
+                            <Agenda title={"DOING"} number={13}></Agenda>
+                            <Agenda title={"DONE"} number={99}></Agenda>
+                        </Grid>
                     </Grid>
                     <Grid item className="calendarSection">
                         <Typography>Calendar</Typography>

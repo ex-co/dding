@@ -23,3 +23,11 @@
   height: 100%;
   width: calc(30% - 64px);
 }
+
+.panelContainer{
+  flex: 1
+}
+
+.agendaContainer{
+  margin: 10px;
+}
