@@ -1,0 +1,25 @@
+.mainContainer{
+  border: 1;
+  height: 100%;
+}
+
+.gridContainer{
+  height: 100%;
+}
+
+.dock{
+  height: 100%;
+  background-color: gray;
+}
+
+.mainSection{
+  height: 100%;
+  width: 70%;
+  background-color: red;
+}
+
+.calendarSection{
+  background-color: yellow;
+  height: 100%;
+  width: calc(30% - 64px);
+}
