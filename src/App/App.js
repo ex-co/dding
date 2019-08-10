@@ -3,8 +3,11 @@ import Grid from '@material-ui/core/Grid';
 
 import CalendarSection from '../CalenderSection/Calendar';
 import * as dm from '../Manager/DataManager';
+import Typography from '@material-ui/core/Typography';
 import TempDrawer from '../sidebar';
 import './App.css'
+
+import Agenda from '../Agenda/Agenda.js';
 
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
@@ -82,8 +85,8 @@ class App extends React.Component {
             <div className="mainContainer">
                 {this._getContent()}
             </div>
-        );
-    }
+        )
+    };
 }
 
 export default App;
