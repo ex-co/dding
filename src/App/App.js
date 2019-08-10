@@ -23,45 +23,45 @@ class App extends React.Component {
     _getContent = () => {
 
         const tasks = dm.default.getUserTask(this.state.user);
-        const teams = dm.default.getUserTeam(this.state.user);
-
-        console.log(tasks[0]);
-        console.log(tasks[1]);
+ //       const teams = dm.default.getUserTeam(this.state.user);
 
         return (
-            <Grid container className="gridContainer">
-                <Grid item className="dock">
-                    <TempDrawer />
-                </Grid>
-                <Grid item className="mainSection">
-                    <ThemeProvider theme={theme}>
-                        <Typography variant="h4">Main Section</Typography>
-                    </ThemeProvider>
-                    <Grid container>
-                        <Grid item xs={4}>
-                            <Agenda title={"TODO"} number={2}></Agenda>
-                        </Grid>
-                        <Grid item xs={4}>
-                            <Agenda title={"DOING"} number={3}></Agenda>
-                        </Grid>
-                        <Grid item xs={4}>
-                            <Agenda title={"DONE"} number={3}></Agenda>
-                        </Grid>
+            <div className="gridContainer">
+                <Grid container className="gridContainer">
+                    <Grid item className="dock">
+                        <TempDrawer />
                     </Grid>
-                    
-                    {JSON.stringify(tasks)}
+                    <Grid item className="mainSection">
+                        <ThemeProvider theme={theme}>
+                            <Typography variant="h4">Main Section</Typography>
+                        </ThemeProvider>
+                        <Grid container>
+                            <Grid item xs={4}>
+                                <Agenda title={"TODO"} number={2}></Agenda>
+                            </Grid>
+                            <Grid item xs={4}>
+                                <Agenda title={"DOING"} number={3}></Agenda>
+                            </Grid>
+                            <Grid item xs={4}>
+                                <Agenda title={"DONE"} number={3}></Agenda>
+                            </Grid>
+                        </Grid>
+
+                        {JSON.stringify(tasks)}
+                    </Grid>
+                    <Grid item className="calendarSection">
+                        <ThemeProvider theme={theme}>
+                            <Typography variant="h4">
+                                Calendar
+                                </Typography>
+                        </ThemeProvider>
+                        <CalendarSection>
+
+                        </CalendarSection>
+                    </Grid>
                 </Grid>
-                <Grid item className="calendarSection">
-                    <ThemeProvider theme={theme}>
-                        <Typography variant="h4">
-                            Calendar
-                        </Typography>
-                    </ThemeProvider>
-                    <CalendarSection>
-                        
-                    </CalendarSection>
-                </Grid>
-            </Grid>
+
+            </div>
         )
     }
 
