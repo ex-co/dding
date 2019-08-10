@@ -9,21 +9,34 @@
 
 .dock{
   height: 100%;
-  background-color: gray;
+  background-color: whitesmoke;
 }
 
 .mainSection{
   height: 100%;
   width: 70%;
-  background-color: red;
+  background-color: white;
 }
 
 .calendarSection{
-  background-color: yellow;
+  background-color: white;
   height: 100%;
   width: calc(30% - 64px);
 }
 
 .sectionTitle{
   font-variant: h4;
+}
+
+.header {
+  background-color: #fcba03;
+}
+
+.avatar {
+  height: 50px;
+  width: 50px;
+}
+
+.MulAvatar {
+  width: 50px;
 }
