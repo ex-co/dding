@@ -27,7 +27,7 @@ function getUserTask(userName) {
 
     data.forEach((item) => {
         
-        if(item.User == userName){
+        if(item.User === userName){
             result.push(item);
         }
     });
@@ -38,7 +38,7 @@ function getUserTeam(userName) {
     const result = [];
 
     data.forEach((item) => {
-        if(item.User == userName){
+        if(item.User === userName){
             result.push(item.Team);
         }
     });

@@ -3,11 +3,8 @@ import Grid from '@material-ui/core/Grid';
 
 import CalendarSection from '../CalenderSection/Calendar';
 import * as dm from '../Manager/DataManager';
-import Typography from '@material-ui/core/Typography';
 import TempDrawer from '../sidebar';
 import './App.css'
-
-import Agenda from '../Agenda/Agenda.js';
 
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
@@ -27,9 +24,6 @@ class App extends React.Component {
 
         const tasks = dm.default.getUserTask(this.state.user);
         const teams = dm.default.getUserTeam(this.state.user);
-
-        console.log(tasks[0]);
-        console.log(tasks[1]);
 
         return (
             <div className="gridContainer">
