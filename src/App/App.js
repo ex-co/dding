@@ -11,8 +11,6 @@ import Agenda from '../Agenda/Agenda.js';
 
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
-import { Typography } from '@material-ui/core';
-import Agenda from '../Agenda/Agenda';
 
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
