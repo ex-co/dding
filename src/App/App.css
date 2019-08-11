@@ -1,6 +1,6 @@
-.mainContainer{
-  border: 1;
+.outerContainer{
   height: 100%;
+  width: 100%;
 }
 
 .gridContainer{
@@ -22,14 +22,6 @@
   background-color: white;
   height: 100%;
   width: calc(30% - 64px);
-}
-
-.sectionTitle{
-  font-variant: h4;
-}
-
-.header {
-  background-color: #fcba03;
 }
 
 .avatar {

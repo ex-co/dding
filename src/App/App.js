@@ -1,18 +1,16 @@
-import React from 'react';
-import Grid from '@material-ui/core/Grid';
+import React from 'react'
+import Grid from '@material-ui/core/Grid'
 
-import CalendarSection from '../CalenderSection/Calendar';
-import * as dm from '../Manager/DataManager';
-import TempDrawer from '../sidebar';
 import './App.css'
 
-import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
-import { ThemeProvider } from '@material-ui/styles';
-import { Typography, Box, Avatar } from '@material-ui/core';
-import Agenda from '../Agenda/Agenda';
+import TempDrawer from '../sidebar'
+import HeaderSection from './HeaderSection'
+import AgendaSection from './AgendaSection'
+import ProgressSection from './ProgressSection'
+import BoardSection from './BoardSection'
+import CalendarSection from './CalendarSection'
 
-let theme = createMuiTheme();
-theme = responsiveFontSizes(theme);
+import * as dm from '../Manager/DataManager'
 
 class App extends React.Component {
 
@@ -21,53 +19,20 @@ class App extends React.Component {
     }
 
     _getContent = () => {
-
-        const tasks = dm.default.getUserTask(this.state.user);
-        const teams = dm.default.getUserTeam(this.state.user);
-
         return (
-            <div className="gridContainer">
-                <Grid container className="header">
-                    <Grid item><Avatar alt="Jaewon" src={process.env.PUBLIC_URL + '/bells.png'}/></Grid>
-                    <Grid item>
-                        <Typography>
-                            <Box fontWeight="fontWeightBold" fontSize={32} fontStyle="italic" fontFamily="Arial" letterSpacing={3}>
-                                D-Ding~
-                            </Box>
-                        </Typography>
-                    </Grid>
-                </Grid>
+            <div className="outerContainer">
+                <HeaderSection></HeaderSection>
                 <Grid container className="gridContainer">
                     <Grid item className="dock">
-                        <TempDrawer />
+                        <TempDrawer/>
                     </Grid>
                     <Grid item className="mainSection">
-                        <ThemeProvider theme={theme}>
-                            <Typography variant="h4">Main Section</Typography>
-                        </ThemeProvider>
-                        <Grid container>
-                            <Grid item xs={4}>
-                                <Agenda title={"TODO"} number={2}></Agenda>
-                            </Grid>
-                            <Grid item xs={4}>
-                                <Agenda title={"DOING"} number={3}></Agenda>
-                            </Grid>
-                            <Grid item xs={4}>
-                                <Agenda title={"DONE"} number={3}></Agenda>
-                            </Grid>
-                        </Grid>
-                        
-                        {JSON.stringify(tasks)}
-                        {teams}
+                        <ProgressSection></ProgressSection>
+                        <AgendaSection title="Agenda"></AgendaSection>
+                        <BoardSection title="Boards"></BoardSection>
                     </Grid>
                     <Grid item className="calendarSection">
-                        <ThemeProvider theme={theme}>
-                            <Typography variant="h4">
-                                Calendar
-                            </Typography>
-                        </ThemeProvider>
-                        <CalendarSection>
-                        </CalendarSection>
+                        <CalendarSection title="Calendar"></CalendarSection>
                     </Grid>
                 </Grid>
             </div>
@@ -76,7 +41,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className="mainContainer">
+            <div className="outerContainer">
                 {this._getContent()}
             </div>
         )
