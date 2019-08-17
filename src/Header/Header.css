@@ -1,0 +1,18 @@
+.title {
+    margin: 0 auto;
+    padding: 5px;
+    font-family: 'Kalam', cursive;
+    font-size: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.headerSection {
+    display: flex;
+    background: orange;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}

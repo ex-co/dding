@@ -1,22 +1,22 @@
 import React from 'react';
-import './Agenda.css';
-import AgendaContent from './AgendaContent';
+import './Progress.css';
+import ProgressContent from './ProgressContent';
 import { ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails } from '@material-ui/core';
-import AgendaInfo from './AgendaInfo';
+import ProgressInfo from './ProgressInfo';
 
-const Agenda = ({title, number}) => {
+const Progress = ({title, number}) => {
     return (
         <ExpansionPanel style={{margin: '10px', rounded: true}}>
             <ExpansionPanelSummary
                 aria-controls="panel1a-content"
                 id="panel1a-header">
-                    <AgendaInfo title={title} number={number}></AgendaInfo>
+                    <ProgressInfo title={title} number={number}></ProgressInfo>
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
-                <AgendaContent></AgendaContent>
+                <ProgressContent></ProgressContent>
             </ExpansionPanelDetails>
         </ExpansionPanel>
     );
 };
 
-export default Agenda;
+export default Progress;

@@ -7,7 +7,8 @@ class Dontainer extends React.Component {
         padding: 20,
         paddingTop:10,
         paddingBottom:10,
-        margin: 20
+        margin: 20,
+        borderRadius: 15
     }
 
     titleStyle = {
@@ -18,7 +19,7 @@ class Dontainer extends React.Component {
 
     contentStyle={
         color: "black",
-        fontSize: 20
+        fontSize: 20,
     }
 
     setTitle(title) {

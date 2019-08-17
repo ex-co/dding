@@ -16,7 +16,7 @@ class BoardSection extends Dontainer {
                 </div>
                 <div style={this.contentStyle}>
                     Contents here
-                    </div>
+                </div>
             </div>
         )
     }
