@@ -1,0 +1,17 @@
+.board {
+    width: 220px;
+    height: 100px;
+    margin: 10px;
+    background-color: black;
+    border-radius: 15px;
+}
+
+.boardContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.boardContent {
+    margin: 10px;
+    color: white;
+}

@@ -1,11 +1,11 @@
 import React from 'react';
-import './Agenda.css';
+import './Progress.css';
 import { ExpansionPanelDetails } from '@material-ui/core';
 
-const AgendaContent = ({title, number}) => {
+const ProgressContent = ({title, number}) => {
     return (
         <ExpansionPanelDetails>
-            <ul>
+            <ul class="progressContent">
                 <li>First item</li>
                 <li>Second item</li>
                 <li>Third item</li>
@@ -13,4 +13,4 @@ const AgendaContent = ({title, number}) => {
         </ExpansionPanelDetails>
     );
 };
-export default AgendaContent;
+export default ProgressContent;

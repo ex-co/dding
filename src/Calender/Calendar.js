@@ -4,9 +4,7 @@ import Calendar from 'react-calendar'
 class CalendarSection extends React.Component{
     render(){
         return (
-            <Calendar className="Calendar">
-
-              </Calendar>
+            <Calendar className="Calendar"></Calendar>
           );
     }
   }
