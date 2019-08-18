@@ -1,53 +1,41 @@
-import React from 'react';
-import Grid from '@material-ui/core/Grid';
+import React from 'react'
+import Grid from '@material-ui/core/Grid'
 
-import CalendarSection from '../CalenderSection/Calendar';
-import * as dm from '../Manager/DataManager';
-import TempDrawer from '../sidebar';
 import './App.css'
 
-import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
-import { ThemeProvider } from '@material-ui/styles';
-import { Typography } from '@material-ui/core';
+import TempDrawer from '../sidebar'
+import HeaderSection from './HeaderSection'
+import AgendaSection from './AgendaSection'
+import ProgressSection from './ProgressSection'
+import BoardSection from './BoardSection'
+import CalendarSection from './CalendarSection'
 
-let theme = createMuiTheme();
-theme = responsiveFontSizes(theme);
+import * as dm from '../Manager/DataManager'
 
 class App extends React.Component {
 
     state = {
         user: "yegeeee"
     }
+
     _getContent = () => {
-
-        const tasks = dm.default.getUserTask(this.state.user);
-        const teams = dm.default.getUserTeam(this.state.user);
-
-        console.log(tasks[0]);
-        console.log(tasks[1]);
-
         return (
-            <Grid container className="gridContainer">
-                <Grid item className="dock">
-                    <TempDrawer />
+            <div className="outerContainer">
+                <HeaderSection></HeaderSection>
+                <Grid container className="gridContainer">
+                    <Grid item className="dock">
+                        <TempDrawer/>
+                    </Grid>
+                    <Grid item className="mainSection">
+                        <ProgressSection></ProgressSection>
+                        <AgendaSection title="Agenda"></AgendaSection>
+                        <BoardSection title="Boards"></BoardSection>
+                    </Grid>
+                    <Grid item className="calendarSection">
+                        <CalendarSection title="Calendar"></CalendarSection>
+                    </Grid>
                 </Grid>
-                <Grid item className="mainSection">
-                    <ThemeProvider theme={theme}>
-                        <Typography variant="h4">Main Section</Typography>
-                    </ThemeProvider>
-                    {JSON.stringify(tasks)}
-                    {teams}
-                </Grid>
-                <Grid item className="calendarSection">
-                    <ThemeProvider theme={theme}>
-                        <Typography variant="h4">
-                            Calendar
-                </Typography>
-                    </ThemeProvider>
-                    <CalendarSection>
-                    </CalendarSection>
-                </Grid>
-            </Grid>
+            </div>
         )
     }
 

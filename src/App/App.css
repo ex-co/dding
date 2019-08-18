@@ -24,6 +24,11 @@
   width: calc(30% - 64px);
 }
 
-.sectionTitle{
-  font-variant: h4;
+.avatar {
+  height: 50px;
+  width: 50px;
+}
+
+.MulAvatar {
+  width: 50px;
 }
