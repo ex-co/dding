@@ -1,0 +1,16 @@
+.item {
+    flex: 1;
+    background: white;
+}
+
+.progressInfo {
+    margin: 0 auto;
+}
+
+.progressInfoItem {
+    font-family: 'Lexend Deca', 'sans-serif';
+}
+
+.progressContent {
+    font-family: 'Lexend Deca', 'sans-serif';
+}

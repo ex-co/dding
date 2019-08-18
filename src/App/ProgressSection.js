@@ -2,7 +2,7 @@ import React from 'react'
 import Grid from '@material-ui/core/Grid'
 
 import Dontainer from '../Interface/Dontainer'
-import Agenda from '../Agenda/Agenda'
+import Progress from '../Progress/Progress';
 
 class ProgressSection extends Dontainer {
 
@@ -16,13 +16,13 @@ class ProgressSection extends Dontainer {
             <div style={this.dontainerStyle}>
                 <Grid container>
                     <Grid item xs={4}>
-                        <Agenda title={"TODO"} number={2}></Agenda>
+                        <Progress title={"TODO"} number={73}></Progress>
                     </Grid>
                     <Grid item xs={4}>
-                        <Agenda title={"DOING"} number={3}></Agenda>
+                        <Progress title={"DOING"} number={14}></Progress>
                     </Grid>
                     <Grid item xs={4}>
-                        <Agenda title={"DONE"} number={3}></Agenda>
+                        <Progress title={"DONE"} number={2}></Progress>
                     </Grid>
                 </Grid>
             </div>
