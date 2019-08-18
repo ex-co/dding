@@ -1,5 +1,6 @@
 import React from 'react'
 import Dontainer from '../Interface/Dontainer'
+import BoardContainer from '../Board/BoardContainer';
 
 class BoardSection extends Dontainer {
 
@@ -15,7 +16,7 @@ class BoardSection extends Dontainer {
                     {this.titleStyle.title}
                 </div>
                 <div style={this.contentStyle}>
-                    Contents here
+                    <BoardContainer></BoardContainer>
                 </div>
             </div>
         )

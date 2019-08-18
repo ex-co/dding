@@ -10,8 +10,6 @@ import ProgressSection from './ProgressSection'
 import BoardSection from './BoardSection'
 import CalendarSection from './CalendarSection'
 
-import * as dm from '../Manager/DataManager'
-
 class App extends React.Component {
 
     state = {

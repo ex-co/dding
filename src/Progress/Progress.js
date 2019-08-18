@@ -6,7 +6,7 @@ import ProgressInfo from './ProgressInfo';
 
 const Progress = ({title, number}) => {
     return (
-        <ExpansionPanel style={{margin: '10px', rounded: true}}>
+        <ExpansionPanel style={{margin: '15px', rounded: true}}>
             <ExpansionPanelSummary
                 aria-controls="panel1a-content"
                 id="panel1a-header">
