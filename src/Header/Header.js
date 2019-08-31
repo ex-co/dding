@@ -1,15 +1,25 @@
 import React from 'react';
-
-import './Header.css';
+import BackGround from './DDing_background.png'
 
 const Header = () => {
+
+    const styles = {
+        headerStyle: {
+            backgroundImage: `url(${BackGround})`,
+            height: '45px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
+        },
+        canvas: {
+            height: '45px'
+        }
+    };
+
     return (
-        <div class="headerSection">
-            <div><img class="logo" src="bells.png" alt="logo" /></div>
-            <div class="title">
-                D-Ding
-            </div>
-        </div>    
+        <div style={styles.headerStyle}>
+            <img alt="Jaewon" style={styles.canvas} src={process.env.PUBLIC_URL + '/DDing_Icon3.png'} />
+        </div>
     )
 }
 
