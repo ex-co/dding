@@ -4,7 +4,7 @@ import Board from './Board';
 
 const BoardContainer = () => {
     return (
-        <div class="boardContainer">
+        <div className="boardContainer">
             <Board teamName="Skiptube"></Board>
             <Board teamName="Zooxo"></Board>
             <Board teamName="Rhyzio"></Board>

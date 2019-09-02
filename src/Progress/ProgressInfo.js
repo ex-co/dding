@@ -3,9 +3,9 @@ import './Progress.css';
 
 const ProgressInfo = ({title, number}) => {
     return (
-        <div class='progressInfo'>
-            <div class='progressInfoItem' style={{fontSize: 20}}>{title}</div>
-            <div class='progressInfoItem' style={{textAlign: "center"}}># {number}</div>
+        <div className='progressInfo'>
+            <div className='progressInfoItem' style={{fontSize: 20}}>{title}</div>
+            <div className='progressInfoItem' style={{textAlign: "center"}}># {number}</div>
         </div>
     );
 };

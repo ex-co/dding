@@ -3,8 +3,8 @@ import './Board.css';
 
 const Board = ({teamName}) => {
     return (
-        <div class="board">
-            <div class="boardContent">{teamName}</div>
+        <div className="board">
+            <div className="boardContent">{teamName}</div>
         </div>
     )
 }

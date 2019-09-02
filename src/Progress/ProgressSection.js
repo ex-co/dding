@@ -2,12 +2,12 @@ import React from 'react'
 import Grid from '@material-ui/core/Grid'
 
 import Dontainer from '../Interface/Dontainer'
-import Progress from '../Progress/Progress';
+import Progress from './Progress';
 
 class ProgressSection extends Dontainer {
 
     constructor(props) {
-        super();
+        super(props);
         this.setPaddingZero();
     }
 
