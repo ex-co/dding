@@ -3,19 +3,23 @@ import Grid from '@material-ui/core/Grid'
 
 import './App.css'
 
+import Dontainer from '../Interface/Dontainer'
 import TempDrawer from '../sidebar'
 import HeaderSection from './HeaderSection'
-import AgendaSection from './AgendaSection'
-import ProgressSection from './ProgressSection'
-import BoardSection from './BoardSection'
-import CalendarSection from './CalendarSection'
+import ProgressSection from '../Progress/ProgressSection'
+
+import BoardContainer from '../Board/BoardContainer';
+import Calendar from '../Calender/Calendar'
 
 import * as dm from '../Manager/DataManager'
 
 class App extends React.Component {
 
     state = {
-        user: "yegeeee"
+        user: "yegeeee",
+        board: BoardContainer,
+        calendar: Calendar,
+        
     }
 
     _getContent = () => {
@@ -27,12 +31,12 @@ class App extends React.Component {
                         <TempDrawer/>
                     </Grid>
                     <Grid item className="mainSection">
-                        <ProgressSection></ProgressSection>
-                        <AgendaSection title="Agenda"></AgendaSection>
-                        <BoardSection title="Boards"></BoardSection>
+                        <ProgressSection title="" content=""></ProgressSection>
+                        <Dontainer title="Agenda" content="contents"></Dontainer>
+                        <Dontainer title="Boards" content={this.state.board}></Dontainer>
                     </Grid>
                     <Grid item className="calendarSection">
-                        <CalendarSection title="Calendar"></CalendarSection>
+                        <Dontainer title="Calendar" content={this.state.calendar}></Dontainer>
                     </Grid>
                 </Grid>
             </div>
