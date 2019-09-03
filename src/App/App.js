@@ -10,8 +10,7 @@ import ProgressSection from '../Progress/ProgressSection'
 
 import BoardContainer from '../Board/BoardContainer';
 import Calendar from '../Calender/Calendar'
-
-import * as dm from '../Manager/DataManager'
+import Agendar from '../Agendar/Agendar';
 
 class App extends React.Component {
 
@@ -19,7 +18,7 @@ class App extends React.Component {
         user: "yegeeee",
         board: BoardContainer,
         calendar: Calendar,
-        
+        agenda: Agendar
     }
 
     _getContent = () => {
@@ -32,7 +31,7 @@ class App extends React.Component {
                     </Grid>
                     <Grid item className="mainSection">
                         <ProgressSection title="" content=""></ProgressSection>
-                        <Dontainer title="Agenda" content="contents"></Dontainer>
+                        <Dontainer title="Agenda" content={this.state.agenda}></Dontainer>
                         <Dontainer title="Boards" content={this.state.board}></Dontainer>
                     </Grid>
                     <Grid item className="calendarSection">

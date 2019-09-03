@@ -1,14 +1,6 @@
 import React from 'react';
 import './Board.css';
 
-<<<<<<< HEAD
-const Board = ({teamName}) => {
-    return (
-        <div className="board">
-            <div className="boardContent">{teamName}</div>
-        </div>
-    )
-=======
 class Board extends React.Component {
     render() {
         return (
@@ -17,6 +9,5 @@ class Board extends React.Component {
             </div>
         )
     }
->>>>>>> Add Agendar section
 }
 export default Board;

@@ -6,13 +6,6 @@ import './Agendar.css';
 
 class Agendar extends React.Component {
 
-    randomValues = this.getRange(200).map(index => {
-        return {
-            date: this.shiftDate(this.today, -index),
-            count: this.getRandomInt(1, 3)
-        };
-    });
-
     today = new Date();
 
     shiftDate(date, numDays) {
@@ -26,14 +19,19 @@ class Agendar extends React.Component {
     }
 
     getRandomInt(min, max) {
-        return Math.floor(Math.random() * (max - min * 1)) * min;
+        return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
     constructor(props) {
         super(props);
         this.startDate = this.shiftDate(this.today, -150);
         this.endDate = this.today;
-        this.values = this.randomValues;
+        this.values = this.getRange(200).map(index => {
+            return {
+                date: this.shiftDate(this.today, -index),
+                count: this.getRandomInt(1, 3)
+            };
+        });
     }
 
     render() {
@@ -42,7 +40,14 @@ class Agendar extends React.Component {
                 startDate={this.startDate}
                 endDate={this.endDate}
                 values={this.values}
-                showWeekdayLabels={true}>
+                showWeekdayLabels={true}
+                classForValue={value => {
+                    if (!value) {
+                        return 'color-empty';
+                    }
+                    return `color-github-${value.count}`;
+                }}
+                gutterSize={2}>
 
             </CalendarHeatmap>
         )
