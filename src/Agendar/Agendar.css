@@ -1,0 +1,9 @@
+.react-calendar-heatmap {
+  height: 100%;
+  width: 90%;
+  font-family: sans-serif;
+}
+
+.react-calendar-heatmap-month-labels {
+  margin: 5px;
+}
