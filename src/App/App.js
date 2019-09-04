@@ -5,9 +5,8 @@ import './App.css'
 
 import Dontainer from '../Interface/Dontainer'
 import TempDrawer from '../sidebar'
-import HeaderSection from './HeaderSection'
-import ProgressSection from '../Progress/ProgressSection'
-
+import Progress from '../Progress/ProgressSection'
+import Header from '../Header/Header';
 import BoardContainer from '../Board/BoardContainer';
 import Calendar from '../Calender/Calendar'
 import Agendar from '../Agendar/Agendar';
@@ -24,13 +23,13 @@ class App extends React.Component {
     _getContent = () => {
         return (
             <div className="outerContainer">
-                <HeaderSection></HeaderSection>
+                <Header></Header>
                 <Grid container className="gridContainer">
                     <Grid item className="dock">
                         <TempDrawer/>
                     </Grid>
                     <Grid item className="mainSection">
-                        <ProgressSection title="" content=""></ProgressSection>
+                        <Progress title="" content=""></Progress>
                         <Dontainer title="Agenda" content={this.state.agenda}></Dontainer>
                         <Dontainer title="Boards" content={this.state.board}></Dontainer>
                     </Grid>
