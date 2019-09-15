@@ -1,0 +1,68 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.16.0/libexec/bin/yarn.js add react-redux redux-actions
+
+PATH: 
+  /Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Xamarin Workbooks.app/Contents/SharedSupport/path-bin
+
+Yarn version: 
+  1.16.0
+
+Node version: 
+  8.11.4
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: EACCES: permission denied, unlink '/Users/yeji/Documents/dding/node_modules/react-icons/README.md'
+
+npm manifest: 
+  {
+    "name": "dding",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "@material-ui/core": "^4.2.0",
+      "@material-ui/icons": "^4.2.1",
+      "bootstrap": "^4.3.1",
+      "lodash": "^4.17.14",
+      "moment": "^2.24.0",
+      "react": "^16.8.6",
+      "react-bootstrap": "^1.0.0-beta.10",
+      "react-calendar": "^2.19.0",
+      "react-calendar-heatmap": "^1.8.1",
+      "react-collapsible": "^2.6.0",
+      "react-dom": "^16.8.6",
+      "react-icon": "^1.0.0",
+      "react-icons": "^3.7.0",
+      "react-redux": "^7.1.1",
+      "react-scripts": "3.0.1"
+    },
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+      "extends": "react-app"
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
