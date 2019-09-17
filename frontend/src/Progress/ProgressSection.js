@@ -6,9 +6,29 @@ import Progress from './Progress';
 
 class ProgressSection extends Dontainer {
 
+    state = {
+        todo: [],
+        doing: [],
+        done: []
+    }
+
     constructor(props) {
         super(props);
         this.setPaddingZero();
+        this.fetchDataFromServer();
+    }
+
+    fetchDataFromServer() {
+        fetch('http://localhost:3001/api/test')
+            .then(response => response.json())
+            .then(json => {
+                this.setState({
+                    todo: json.progressData.todo,
+                    doing: json.progressData.doing,
+                    done: json.progressData.done,
+                })
+            });
+        
     }
 
     render() {
@@ -16,13 +36,13 @@ class ProgressSection extends Dontainer {
             <div style={this.dontainerStyle}>
                 <Grid container>
                     <Grid item xs={4}>
-                        <Progress title={"TODO"} number={73}></Progress>
+                        <Progress title={"TODO"} progressData={this.state.todo}></Progress>
                     </Grid>
                     <Grid item xs={4}>
-                        <Progress title={"DOING"} number={14}></Progress>
+                        <Progress title={"DOING"} progressData={this.state.doing}></Progress>
                     </Grid>
                     <Grid item xs={4}>
-                        <Progress title={"DONE"} number={2}></Progress>
+                        <Progress title={"DONE"} progressData={this.state.done}></Progress>
                     </Grid>
                 </Grid>
             </div>

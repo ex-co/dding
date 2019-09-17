@@ -7,7 +7,27 @@ const router = express.Router();
 const PORT = 3001;
 
 router.get('/test', (request, response) => {
-    return response.json({ data: "Hello I'm from server ~" });
+    return response.json({ progressData: {
+            todo: [
+                "First Todo Item",
+                "Second Todo Item",
+                "Third Todo Item",
+                "Fourth Todo Item",
+            ],
+            doing: [
+                "First Doing Item",
+                "Second Doing Item",
+                "Third Doing Item",
+                "Fourth Doing Item",
+            ],
+            done: [
+                "First Done Item",
+                "Second Done Item",
+                "Third Done Item",
+                "Fourth Done Item",
+            ]
+        }
+    });
 });
 
 app.use(cors());
