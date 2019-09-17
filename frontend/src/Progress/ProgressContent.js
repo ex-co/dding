@@ -3,13 +3,25 @@ import './Progress.css';
 import { ExpansionPanelDetails } from '@material-ui/core';
 
 class ProgressContent extends React.Component {
+
+    state = {
+        progressData: []
+    }
+
+    componentWillReceiveProps(nextProps) {
+        console.log(nextProps);
+        this.setState({
+            progressData: nextProps.progressData
+        });
+    }
+
     render() {
         return (
             <ExpansionPanelDetails>
                 <ul className="progressContent">
-                    <li>First item</li>
-                    <li>Second item</li>
-                    <li>Third item</li>
+                    {
+                        this.state.progressData.map((title, index) => <li key={index}>{title}</li>)
+                    }
                 </ul>
             </ExpansionPanelDetails>
         )

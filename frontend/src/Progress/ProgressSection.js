@@ -28,7 +28,6 @@ class ProgressSection extends Dontainer {
                     done: json.progressData.done,
                 })
             });
-        
     }
 
     render() {
